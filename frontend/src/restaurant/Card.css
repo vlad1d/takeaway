@@ -1,0 +1,30 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-left h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.info-left p {
+    margin: 0.2rem 0 0;
+    color: gray;
+}
+
+.info-right {
+    text-align: right;
+}
+
+.rating {
+    color: black;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.25rem;
+}
