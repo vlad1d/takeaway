@@ -8,7 +8,7 @@ function Header({ postcode, setPostcode, onSearch }) {
             <h1>Lookup Restaurant :</h1>
             <div className="sbox">
                 <input type="text" placeholder="Postcode..." value={postcode} onChange={(e) => setPostcode(e.target.value)} />
-                <button className="sbutton" onClick={onSearch}> 🔍 </button>
+                <button className="sbutton" onClick={onSearch}> Search </button>
             </div>
         </header>
     );

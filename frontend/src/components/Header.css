@@ -12,10 +12,26 @@
 }
 
 .sbutton {
-    background: none;
+    background-color: #eb7c26;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
     border: none;
-    font-size: 1.5rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 100px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sbutton:hover {
+    background-color: #d96c1d;
+    transform: translateY(-1px);
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
 }
 
 .sbox {

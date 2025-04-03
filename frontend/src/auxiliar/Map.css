@@ -1,0 +1,34 @@
+.curr-state {
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map-text {
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.curr-img {
+    width: 25vw;
+    max-width: 400px;
+    min-width: 200px;
+    height: auto;
+    opacity: 0.85;
+}
+
+.map-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.svg-pin {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
