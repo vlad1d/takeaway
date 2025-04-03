@@ -1,28 +1,30 @@
 package vlad.takeawaybackend.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 /**
  * Restaurant class to create restaurant objects.
  */
-@NoArgsConstructor @JsonIgnoreProperties(ignoreUnknown = true) @Getter @Setter
+@JsonIgnoreProperties(ignoreUnknown = true) @Getter @Setter
 public class Restaurant {
     private String name;
-    private String[] cuisines;
-    private double rating;
-    private String address;
+    private List<Cuisine> cuisines;
+    private Rating rating;
+    private Address address;
 
-    /**
-     * Constructor to initialize the restaurant.
-     * @param name of the restaurant
-     * @param cuisines is a list of strings to support multiple cuisines
-     * @param rating double value to keep the rating number
-     * @param address of the restaurant
-     */
-    public Restaurant(String name, String[] cuisines, double rating, String address) {
+    @JsonCreator
+    public Restaurant(
+            @JsonProperty ("name") String name,
+            @JsonProperty ("cuisines") List<Cuisine> cuisines,
+            @JsonProperty ("rating") Rating rating,
+            @JsonProperty ("address") Address address
+    ) {
         this.name = name;
         this.cuisines = cuisines;
         this.rating = rating;

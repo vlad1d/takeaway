@@ -1,21 +1,35 @@
 package vlad.takeawaybackend.controller;
 
-import lombok.Getter;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import vlad.takeawaybackend.model.Restaurant;
+import vlad.takeawaybackend.service.RestaurantService;
 
 import java.util.List;
 
-@Getter
+/**
+ * RestaurantController is the entry point for the restaurant API.
+ */
+@RestController @RequestMapping("/restaurants")
 public class RestaurantController {
-    private List<Restaurant> restaurants;
+    private final RestaurantService restaurantService;
 
     /**
-     * Constructor to initialize the restaurant list. Use filler values for now.
-      */
-    public RestaurantController() {
-        this.restaurants = List.of(
-                new Restaurant("R1", new String[]{"Pizza", "Italian"}, 4, "Diamantlaan"),
-                new Restaurant("R2", new String[]{"Chicken", "Mexican"}, 3.2, "Grote Tuin")
-        );
+     * Constructor to initialize the service.
+     * @param restaurantService the service to fetch restaurant data
+     */
+    public RestaurantController(RestaurantService restaurantService) {
+        this.restaurantService = restaurantService;
+    }
+
+    /**
+     * Sets a get mapping on the /restaurants endpoint to fetch restaurants.
+     * @param postcode the postcode to search for restaurants
+     * @return a list of restaurant objects
+     */
+    @GetMapping
+    public List<Restaurant> getRestaurants(String postcode) {
+        return restaurantService.fetchRestaurants(postcode);
     }
 }
