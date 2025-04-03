@@ -75,5 +75,4 @@ public class RestaurantService {
         List<Restaurant> restaurants = parseRestaurants(responseBody);
         return restaurants.stream().limit(10).collect(Collectors.toList()); // Limit to 10 restaurants
     }
-
 }
