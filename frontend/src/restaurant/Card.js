@@ -18,7 +18,7 @@ function Card({ restaurant }) {
             </div>
 
             <div className="info-right">
-                <span className="rating">{restaurant.rating.starRating}⭐</span>
+                <span className="rating">{restaurant.rating.starRating} ⭐</span>
                 <span>{restaurant.cuisines.map(c => c.name).join(", ")}</span>
             </div>
         </motion.div>

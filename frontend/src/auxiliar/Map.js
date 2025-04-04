@@ -5,7 +5,7 @@ import "./Map.css";
 function Map() {
   return (
     <motion.div
-      className="curr-state"
+      className="map-state"
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -13,7 +13,7 @@ function Map() {
       <p className="map-text">Hungry? Let's find food!</p>
 
       <div className="map-wrapper">
-        <img src="/map.png" className="curr-img" />
+        <img src="/map.png" className="map-img" alt="map of netherlands" />
 
         <motion.svg
           className="svg-pin"

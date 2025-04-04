@@ -1,9 +1,10 @@
-.curr-state {
+.map-state {
     text-align: center;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -2rem;
 }
 
 .map-text {
@@ -11,15 +12,18 @@
     font-family: 'Nunito', sans-serif;
     color: white;
     font-weight: 900;
-    margin-bottom: 1rem;
 }
 
-.curr-img {
+.map-img {
     width: 25vw;
     max-width: 400px;
     min-width: 200px;
     height: auto;
     opacity: 0.85;
+    border-radius: 100%;
+    padding: 1rem;
+    border: 5px solid white;
+    margin-top: 1.5rem;
 }
 
 .map-wrapper {
@@ -31,4 +35,13 @@
     position: absolute;
     top: 40%;
     left: 35%;
+}
+
+.map-state p {
+    font-size: 2rem;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1rem;
 }
