@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { motion } from "framer-motion";
 import "./EmptyState.css";
@@ -10,8 +12,19 @@ function EmptyState() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-            <p>Oops! No restaurants found.</p>
-            <img src="/plate.png" className="curr-img" />
+
+        <motion.img src="/plate.png" className="curr-img" alt="Empty plate"
+            animate={{
+              y: [0, -10, 0],
+              rotate: [0, 5, 0, -5, 0],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "easeInOut",
+            }}
+          />
+            <h2>Oops! No restaurants found. </h2>
             <p>Try another postcode?</p>
         </motion.div>
     );
