@@ -61,3 +61,6 @@ The following assumptions were made during the development of the application:
 
 ## Contact
     Vlad Ichim | 0681097927 | vladichim17@yahoo.ro
+
+## Appendix
+![Frontend Sketch](/frontend/public/sketch.png)
