@@ -13,7 +13,7 @@ function EmptyState() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
         >
 
-        <motion.img src="/plate.png" className="curr-img" alt="Empty plate"
+        <motion.img src="/platequestion.png" className="curr-img" alt="Empty plate"
             animate={{
               y: [0, -10, 0],
               rotate: [0, 5, 0, -5, 0],

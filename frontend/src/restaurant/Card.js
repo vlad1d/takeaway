@@ -21,7 +21,14 @@ function Card({ restaurant }) {
 
             <div className="info-right">
                 <span className="rating">{restaurant.rating.starRating} ⭐</span>
-                <span>{restaurant.cuisines.map(c => c.name).join(", ")}</span>
+                <div className="cuisines"> 
+                    {restaurant.cuisines.map((cuisine, index) => (
+                        <span key={index} className="cuisine">
+                            {cuisine.name}
+                        </span>
+                    ))}
+                </div>
+                {/* <span>{restaurant.cuisines.map(c => c.name).join(", ")}</span> */}
             </div>
         </motion.div>
     );

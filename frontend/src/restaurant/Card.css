@@ -31,3 +31,19 @@
     display: block;
     margin-bottom: 0.25rem;
 }
+
+.cuisines {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+    justify-content: flex-end;
+}
+.cuisine {
+    background-color: #e2e2e2;
+    border: 1px solid #ccc;
+    padding: 2px 6px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: black;
+}
