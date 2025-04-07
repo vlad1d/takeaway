@@ -1,15 +1,31 @@
 .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-top: 1rem;
     margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo {
     width: 40px;
     height: 40px;
 }
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
 
 .sbutton {
     background-color: #eb7c26;
